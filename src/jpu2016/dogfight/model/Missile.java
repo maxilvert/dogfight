@@ -23,7 +23,25 @@ public class Missile extends Mobile {
 
 	public void move() {
 		if (distanceTraveled + SPEED >= MAX_DISTANCE_TRAVELED) {
-			
+			this.getDogfightModel().removeMobile((IMobile) this);
+		} else {
+			Position position = this.getPosition();
+			switch (this.getDirection()) {
+			case DOWN:
+				position.setY(position.getY() + 4);
+				break;
+			case UP:
+				position.setY(position.getY() - 4);
+				break;
+			case RIGHT:
+				position.setX(position.getX() + 4);
+				break;
+			case LEFT:
+				position.setX(position.getX() - 4);
+				break;
+			default:
+				break;
+			}
 		}
 	}
 

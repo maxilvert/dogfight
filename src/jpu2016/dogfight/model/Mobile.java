@@ -73,22 +73,26 @@ public class Mobile {
 
 	private void moveUp() {
 		// TODO Auto-generated method stub
-
+		Position position = this.getPosition();
+		position.setY(position.getY() - speed);
 	}
 
 	private void moveDown() {
 		// TODO Auto-generated method stub
-
+		Position position = this.getPosition();
+		position.setY(position.getY() + speed);
 	}
 
 	private void moveLeft() {
 		// TODO Auto-generated method stub
-
+		Position position = this.getPosition();
+		position.setX(position.getX() - speed);
 	}
 
 	private void moveRight() {
 		// TODO Auto-generated method stub
-
+		Position position = this.getPosition();
+		position.setX(position.getX() + speed);
 	}
 
 	public Color getColor() {
